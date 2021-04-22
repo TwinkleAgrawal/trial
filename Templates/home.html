@@ -1,0 +1,54 @@
+
+{% load static %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+		<title>Welcome to my page</title>
+		<style type="text/css">
+            button{
+                float: center;
+    color: blue;
+    width: 35%;
+    text-align: center;
+        padding: 15px 10px;
+        text-decoration: none;
+    font-size: 30px; 
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #fff;
+            }
+            a:hover{
+
+    background-color: rgb(200,155,155);
+    color:black;
+}
+ a.active{
+    
+    color:pink;
+}
+        </style>
+    
+	</head>
+<body>
+ <header>
+            <div class="header">
+                        <a href="../home" class="logo">
+                            BANK OF NAGPUR
+                        </a>
+                       <div class="header-right"> 
+                            <a href="../customers" class="active">View Customers</a>
+                            <a href="../transfer">Transfer money</a>
+                            <a href="../history">View previous Transactions</a>
+                            
+                        </div>
+                    </div>
+                </header>
+    <center>                  <h1>Welcome To Bank Of Nagpur</h1>
+                  <h1>Hope you have a good day</h1>
+                 <div class="cust"> <button><a href="../customers/" class="main-filled-button">View customers</a></button></div>
+                  </center>
+
+              </body>
+</html>

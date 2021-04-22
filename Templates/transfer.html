@@ -1,0 +1,95 @@
+
+{% load static %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+		<title>Transfer money</title>
+	<style type="text/css">
+		.select{
+			font-size: bolder;
+			font-size: 30px;
+			width: 60%;
+			display: block;
+			position: relative;
+			top:20px;
+
+		
+		}
+		.select-content{
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+
+		}
+			h1{
+		font-weight: bold;
+		font-size: 20px;
+	}	</style>	
+
+    
+	</head>
+<body>
+ <header>
+            <div class="header">
+                        <a href="../home" class="logo">
+                            BANK OF NAGPUR
+                        </a>
+                       <div class="header-right"> 
+                            <a href="../customers" class="active">View Customers</a>
+                            <a href="../transfer">Transfer money</a>
+                            <a href="../history">View previous Transactions</a>
+                            
+                        </div>
+                    </div>
+                </header>
+   
+                  	<form method="POST" action="../check/">
+		{% csrf_token %}
+
+			<center>
+			<label for="send">sender id:</label><br>
+			<select   class="select" id="send" name="send">
+				<div class="select-content">
+									<option value="00">---SELECT Account number---</option>
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+									<option value="06">06</option>
+									<option value="07">07</option>
+									<option value="08">08</option>
+									<option value="09">09</option>
+									<option value="10">10</option></select>
+									<br>
+							</div>
+						</select>
+  			    <label for="receive">receiver id:</label><br>	   
+			<select class="select" id="receive" name="receive">
+				<div class="select-content">
+									<option value="00"><h1>---SELECT Account number---</h1></option>
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+									<option value="06">06</option>
+									<option value="07">07</option>
+									<option value="08">08</option>
+									<option value="09">09</option>
+									<option value="10">10</option>
+			</div></select><br>
+			<input name="button" type="submit" value="submit"/>
+		
+			</center>
+		</form>
+  </body>
+</html>
+
+		
+	
+		
+
+
+

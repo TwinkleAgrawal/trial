@@ -1,0 +1,71 @@
+
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+        <title>Customer details</title>    
+    </head>
+<body><header>
+            <div class="header">
+                        <a href="../home" class="logo">
+                            BANK OF NAGPUR
+                        </a>
+                       <div class="header-right"> 
+                            <a href="../customers" class="active">View Customers</a>
+                            <a href="../transfer">Transfer money</a>
+                            <a href="../history">View previous Transactions</a>
+                            
+                        </div>
+                    </div>
+                </header>
+                        
+                        <!-- ***** Menu End ***** -->
+                
+    <!-- ***** Header Area End ***** -->
+    
+    
+
+
+    <!-- ***** Main Banner Area Start ***** -->
+
+                   {% if stu %}
+ <!--<h1>Show Data</h1>
+ <h3>{{stu}}</h3>-->
+<h1><table>
+     <tr>
+         <th>EMPID</th>
+         <th>Name</th>
+         <th>mobno</th>
+         <th>Email</th>
+         <th>Balance</th>
+         <th>Transfer</th>
+        <!-- 
+        <td>{{st.currentbal}}</td>-->
+     </tr>
+ <tr>
+     {% for st in stu %}
+     <td>{{st.emp_id}}</td>
+     <td>{{st.emp_name}}</td>
+     <td>{{st.mobno}}</td>
+     <td>{{st.emailid}}</td>
+     <td>{{st.currentbal}}</td>
+     <td><a href="../transfer">Transfer</a></td>
+
+     
+ </tr>
+
+     {% endfor %}
+</table>
+{% else %}
+ <h1>No Data</h1>
+{% endif %}</h1>
+                
+  </body>
+</html>
+
+
+       

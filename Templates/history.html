@@ -1,0 +1,76 @@
+
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />        
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+<style type="text/css">
+    body{
+        background: pink;
+    }
+    table{
+        width: 100%;
+        margin: 10px 10px;
+    }
+</style>
+        <title>Previous transactions</title>    
+    </head>
+<body>
+ <center>  
+    <!-- ***** Header Area End ***** -->
+ <header>
+            <div class="header">
+                        <a href="../home" class="logo">
+                            BANK OF NAGPUR
+                        </a>
+                       <div class="header-right"> 
+                            <a href="../customers" class="active">View Customers</a>
+                            <a href="../transfer">Transfer money</a>
+                            <a href="../history">View previous Transactions</a>
+                            
+                        </div>
+                    </div>
+                </header>
+                           
+{% if stu %}
+ <!--<h1>Show Data</h1>
+ <h3>{{stu}}</h3>-->
+ <br><br>
+ <div class="historytable">
+<table>
+     <tr>
+        <th>TRANSACTION ID</th>
+         <th>SENDER ACC. NO</th>
+         <th>SENDER NAME</th>
+         <th>Amount sent</th>
+         <th>RECEIVER NAME</th>
+         <th>RECEIVER ACCNO</th>
+         <th>DATE OF TRANSACTION</th>
+      </h1>
+        <!-- <th>Balance</th>
+        <td>{{st.currentbal}}</td>-->
+     </tr>
+ <tr>
+     {% for st in stu %}
+     <td>{{st.transid}}</td>
+     <td>{{st.emp_id}}</td>
+     <td>{{st.sender}}</td>
+      <td>{{st.amount}}</td>
+      <td>{{st.recname}}</td>
+     <td>{{st.receiver}}</td>
+     <td>{{st.date_trans}}</td>  
+ </tr>
+
+     {% endfor %}
+</table>
+</div>
+{% else %}
+ <h1>No Data</h1>
+{% endif %}
+  </body>
+</html>
+
+
+

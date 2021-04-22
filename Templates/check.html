@@ -1,0 +1,71 @@
+
+{% load static %}
+<html>
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+          <title>verify details</title>
+          
+
+     </head>
+<body>
+
+<header>
+            <div class="header">
+                        <a href="../home" class="logo">
+                            BANK OF NAGPUR
+                        </a>
+                       <div class="header-right"> 
+                            <a href="../customers" class="active">View Customers</a>
+                            <a href="../transfer">Transfer money</a>
+                            <a href="../history">View previous Transactions</a>
+                            
+                        </div>
+                    </div>
+                </header>
+    <!-- ***** Header Area End ***** -->
+    
+    
+
+
+    <!-- ***** Main Banner Area Start ***** -->
+ <br><br>
+ <table>
+      <tr>
+          <th>SENDER</th>
+          <th>RECEIVER</th>
+     </tr>
+     <th>{{c.emp_id}}</th>
+     <th>{{d.emp_id}}</th>
+     <tr>
+<th>{{c.emp_name}}</th>
+<th>{{d.emp_name}}</th>
+     </tr>
+     <tr>
+          <th>{{c.mobno}}</th>
+          <th>{{d.mobno}}</th>
+     </tr>
+     <tr>
+          <th>{{c.emailid}}</th>
+          <th> {{d.emailid}}</th>
+     </tr>
+     <tr>
+          <th>{{c.currentbal}}</th>
+          <th>XXXX</th>
+     </tr>
+ </table>
+  
+     <form  method="POST" action="../success/" >
+          {% csrf_token %}
+               <label for="amount">enter amount:</label><br>
+               <input type="text" id="amount" name="amount"><br>
+               <br><input name="button" type="submit" value="submit"/>
+          </form>
+           
+  </body>
+</html>
+
+
+
+

@@ -1,0 +1,89 @@
+body{
+	background-image: url('/static/images/pigg.jpg');
+	background-position: right;
+	background-attachment: fixed;
+	background-size: 60%;
+	background-repeat: no-repeat;
+	margin: 0;
+	background-color:rgba(245,250,255,0.2);
+}
+.header{
+	overflow: hidden;
+	background-color: 	#F08080;
+	padding: 25px;
+
+}
+.header a {
+  float: left;
+  color: pink;
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+  font-size: 30px; 
+  line-height: 10px;
+  border-radius: 4px;
+}
+.header-right{
+	float: right;
+}
+.header a.active{
+	
+	color:pink;
+}
+.header a:hover{
+	background-color: rgb(200,155,155);
+	color:black;
+}
+table{
+	width: 50%;
+	border: 1px solid black;
+  border-collapse: collapse;
+  padding-top:30px;
+  position: left;
+}
+ th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align:center;
+  font-size: 25px;
+  font-weight: bolder;
+  
+}
+th{
+	font-size: 30px;
+	font-weight: bold;
+}
+form{
+		font-size: 60px;
+	width: 50%;
+	text-align: center;
+	padding: 20px;
+}
+
+input{
+	font-size: 30px;
+}
+.cust{float: left;
+  color: blue;
+  width: 60%;
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+  font-size: 30px; 
+  }
+  h1{
+  	font-weight: bolder;
+  	float: left;
+  	width: 60%;
+  	padding-top: 30px;
+  	padding-left: 30px;
+  	
+  }
+.cust a:hover{
+	background-color: rgb(200,155,155);
+	color:black;
+}
+.cust a.active{
+	
+	color:pink;
+}

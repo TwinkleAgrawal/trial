@@ -1,0 +1,35 @@
+
+{% load static %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" />
+		<title>Payment Done Successfully</title>
+	</head>
+<body>
+
+
+	<header>
+            <div class="header">
+                        <a href="../home" class="logo">
+                            BANK OF NAGPUR
+                        </a>
+                       <div class="header-right"> 
+                            <a href="../customers" class="active">View Customers</a>
+                            <a href="../transfer">Transfer money</a>
+                            <a href="../history">View previous Transactions</a>
+                            
+                        </div>
+                    </div>
+                </header>
+                  	<h1>Hello {{send.emp_name}}<br>
+			Payment Done successfully
+		</h1>
+	
+		<h1>Your updated balance is {{amo}} </h1>
+               
+  </body>
+</html>
+
+		
